@@ -14,6 +14,6 @@ def homepage():
     
     return render_template('index.html', context=context)
 
-@app.route('/teste/')
+@app.route('/contatos/')
 def novapag():
-    return "Você está na segunda página!"
+    return "Você está na página de contatos!"
