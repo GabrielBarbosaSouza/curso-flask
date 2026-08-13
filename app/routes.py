@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, url_for
+from flask import render_template, url_for, request
 
 
 @app.route('/')
@@ -14,6 +14,15 @@ def homepage():
     
     return render_template('index.html', context=context)
 
-@app.route('/contatos/')
+@app.route('/contato/', methods=['GET', 'POST'])
 def novapag():
-    return "Você está na página de contatos!"
+    context = {}
+    
+    if request.method == 'GET':
+        pesquisa = request.args.get('pesquisa')
+        context.update({
+            'pesquisa': pesquisa
+        })
+        
+    return render_template('contato.html', context=context)
+    
