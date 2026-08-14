@@ -1,5 +1,6 @@
-from app import app
+from app import app, db
 from flask import render_template, url_for, request
+from app.models import Contato
 
 
 @app.route('/')
@@ -28,8 +29,23 @@ def contato():
         context.update({'pesquisa': pesquisa}) # atualiza para a pesquisa não aparecer na URL
         
     if request.method == 'POST':
-            pesquisa = request.form['pesquisa'] # pega a resposta do formulário POST
-            print(f"POST: {pesquisa}") # printa a resposta no terminal
+        # cada request.form pega os dados que o usuário colocou no input do HTML
+        
+        nome = request.form['nome'] # pega o nome
+        email = request.form['email'] # pega o email
+        assunto = request.form['assunto'] # pega o assunto
+        mensagem = request.form['mensagem'] # pega a mensagem
+        
+        # criar o meu primeiro contato / usuario cadastrado no db
+        user1 = Contato(
+            nome=nome,
+            email=email,
+            assunto=assunto,
+            mensagem=mensagem
+        )
+
+        db.session.add(user1)
+        db.session.commit()
 
             
     return render_template('contato.html', context=context) # retorna a página de contato e o context

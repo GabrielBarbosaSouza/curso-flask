@@ -29,13 +29,27 @@
             <h3>Formulário POST</h3>
         </div>
         <form action="" method="post" class="mt-2">
-            <p>Envie dados no campo abaixo:</p>
+            <p>Envie dados nos campos abaixo:</p>
+            <div class="row">
+                <div class="col-6 form-floating mt-2 mb-2">
+                <input type="text" class="form-control" id="floatingInput" name="nome" placeholder="Seu nome">
+                <label for="floatingInput">Digite o nome</label>
+            </div>
+            <div class="col-6 form-floating mt-2 mb-2">
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="Seu e-mail">
+                <label for="floatingInput">Digite o e-mail</label>
+            </div>
+            </div>
             <div class="col-9 form-floating mt-2 mb-2">
-                <input type="text" class="form-control" id="floatingInput" name="pesquisa" placeholder="Seu Assunto">
-                <label for="floatingInput">Digite aqui</label>
+                <input type="text" class="form-control" id="floatingInput" name="assunto" placeholder="Seu assunto">
+                <label for="floatingInput">Digite o assunto</label>
+            </div>
+            <div class="col-9 form-floating mt-2 mb-2">
+                <input type="text" class="form-control" id="floatingInput" name="mensagem" placeholder="Sua mensagem">
+                <label for="floatingInput">Digite a mensagem</label>
             </div>
              <div class="col-3">
-                <button type="submit" class="btn btn-primary mt-2 mb-4">Pesquise aqui</button>
+                <button type="submit" class="btn btn-primary mt-2 mb-4">Envie aqui</button>
              </div>
         </form>
     </div>
