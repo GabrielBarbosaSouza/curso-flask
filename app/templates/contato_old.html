@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Camp Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <h3>Formulário GET</h3>
+        </div>
+        <form action="" method="get" class="mt-2">
+            <p>Pesquise no campo abaixo:</p>
+            <div class="col-9 form-floating mt-2 mb-2">
+                <input type="text" class="form-control" id="floatingInput" name="pesquisa" placeholder="Seu Assunto">
+                <label for="floatingInput">Digite aqui</label>
+            </div>
+             <div class="col-3">
+                <button type="submit" class="btn btn-primary mt-2 mb-4">Pesquise aqui</button>
+             </div>
+        </form>
+        <p>Você pesquisou: {{context.pesquisa}}</p>
+
+        <hr>
+
+        <div class="row mt-4">
+            <h3>Formulário POST</h3>
+        </div>
+        <form action="" method="post" class="mt-2">
+            <p>Envie dados nos campos abaixo:</p>
+            <div class="row">
+                <div class="col-6 form-floating mt-2 mb-2">
+                <input type="text" class="form-control" id="floatingInput" name="nome" placeholder="Seu nome">
+                <label for="floatingInput">Digite o nome</label>
+            </div>
+            <div class="col-6 form-floating mt-2 mb-2">
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="Seu e-mail">
+                <label for="floatingInput">Digite o e-mail</label>
+            </div>
+            </div>
+            <div class="col-9 form-floating mt-2 mb-2">
+                <input type="text" class="form-control" id="floatingInput" name="assunto" placeholder="Seu assunto">
+                <label for="floatingInput">Digite o assunto</label>
+            </div>
+            <div class="col-9 form-floating mt-2 mb-2">
+                <input type="text" class="form-control" id="floatingInput" name="mensagem" placeholder="Sua mensagem">
+                <label for="floatingInput">Digite a mensagem</label>
+            </div>
+             <div class="col-3">
+                <button type="submit" class="btn btn-dark mt-2 mb-4">Envie aqui</button>
+             </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -10,4 +10,5 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from app.routes import homepage
+from app.routes import contato_old
 from app.models import Contato
